@@ -1,6 +1,21 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.link_header {
+  color:#0A58CA;
+}
+
+.fondo_header {
+  background-color: #020f2a;
+}
+
+
 .App {
   text-align: center;
 }
+
 
 .App-logo {
   height: 40vmin;
