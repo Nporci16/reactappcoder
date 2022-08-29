@@ -1,11 +1,12 @@
 import React from "react";
+import fotoMenu from "./images/fotomain.jpg";
 
 
 
 const Main = () => {
     return(
-        <div>
-            Main
+        <div className="container col-md-6">
+            <img src= {fotoMenu} width="600"  alt="fotomenu" />
         </div>
     )
 }

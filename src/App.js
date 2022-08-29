@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Header from './contenido/Header';
 import Main from './contenido/Main';
-import Pie from './contenido/Pie';
+import Footer from './contenido/Footer';
 
 function App() {
   return (
@@ -10,8 +10,8 @@ function App() {
       <Header />
       <hr />
       <Main />
-      <hr />
-      <Pie />
+      <hr/>
+      <Footer redesSociales="Seguinos en nuestras Redes" />
     </div>
   );
 }
