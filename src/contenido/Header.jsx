@@ -3,6 +3,7 @@ import logo from "./images/Logo_de_la_Copa_Mundial_de_fútbol_2022.svg.png";
 import fixture from "./images/fixture.png";
 import jugadores from "./images/jugadores.png";
 import news from "./images/news.png";
+import CartWidget from "./CartWidget";
 
 const Header = () => {
     return(
@@ -20,6 +21,7 @@ const Header = () => {
                         <li className="nav-item">
                             <a className="nav-link link_header"><img src= {news} width="30"  alt="news" />Noticias</a>
                         </li>
+                        <CartWidget />
                     </ul>
         </div>
     )
