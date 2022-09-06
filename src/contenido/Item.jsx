@@ -1,4 +1,5 @@
 import React from "react";
+import ItemCount from "./ItemCount";
 
 const Item = ({nombre, imagen, precio}) => {
     return (
@@ -7,7 +8,7 @@ const Item = ({nombre, imagen, precio}) => {
             <div className="card-body bg-dark text-white">
                 <h5 className="card-title text-center"><b>{nombre}</b></h5>
                 <p className="card-text text-center text-secondary">${precio}</p>
-                <input type="button" className="btn btn-primary" value="Agregar" />
+                <ItemCount stock={10} initial={1} onAdd={0}/>
             </div>
         </div>
     )

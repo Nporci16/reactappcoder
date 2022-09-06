@@ -3,7 +3,6 @@ import './App.css';
 import Header from './contenido/Header';
 import Ranking from './contenido/Ranking';
 import Main from './contenido/Main';
-import ItemCount from './contenido/ItemCount';
 import Footer from './contenido/Footer';
 import ItemListContainer from './contenido/ItemListContainer';
 
@@ -21,7 +20,6 @@ function App() {
       <Main />
       <hr />
       <ItemListContainer />
-      <ItemCount stock={5} initial={1} onAdd={0}/>
       <hr/>
       <Footer redesSociales="Seguinos en nuestras Redes" />
     </div>
