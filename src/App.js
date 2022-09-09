@@ -5,6 +5,8 @@ import Ranking from './contenido/Ranking';
 import Main from './contenido/Main';
 import Footer from './contenido/Footer';
 import ItemListContainer from './contenido/ItemListContainer';
+import {BrowserRourter, Routes, Route} from "react-router-dom";
+import ItemDetailContainer from './contenido/ItemDetailContainer';
 
 function App() {
 
@@ -20,6 +22,7 @@ function App() {
       <Main />
       <hr />
       <ItemListContainer />
+      <ItemDetailContainer />
       <hr/>
       <Footer redesSociales="Seguinos en nuestras Redes" />
     </div>
