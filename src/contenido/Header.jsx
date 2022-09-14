@@ -1,7 +1,6 @@
 import React from "react";
 import logo from "./images/Logo_de_la_Copa_Mundial_de_fútbol_2022.svg.png";
-import fixture from "./images/fixture.png";
-import jugadores from "./images/jugadores.png";
+import { Link } from "react-router-dom";
 import news from "./images/news.png";
 import CartWidget from "./CartWidget";
 
@@ -13,10 +12,10 @@ const Header = () => {
                             <a className="nav-link active" aria-current="page" href="#"><img src= {logo} width="180"  alt="Mundial" /></a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link link_header" href="#"><img src= {fixture} width="30"  alt="fixture" />Fixture</a>
+                        <Link className="nav-link active" aria-current="page" to='/inicio'>Inicio</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link link_header" href="#"><img src= {jugadores} width="30"  alt="jugadores" />Jugadores</a>
+                            <Link className="nav-link" to='/tienda'>Tienda</Link>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link link_header"><img src= {news} width="30"  alt="news" />Noticias</a>
