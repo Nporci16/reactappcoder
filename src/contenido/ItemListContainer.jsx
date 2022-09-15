@@ -9,6 +9,7 @@ const ItemListContainer = () => {
     const [items, setItems] = useState([]);
     const {categoriaId} = useParams();
 
+
     useEffect(() => {
         const getProductos = new Promise((resolve) => {
             setTimeout(() => {

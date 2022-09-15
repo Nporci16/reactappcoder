@@ -17,7 +17,7 @@ export const ItemDetailContainer = () => {
         });
 
         getProducto.then(res => setItems(res.find(producto => producto.id === parseInt(detalleId))));
-        console.log(detalleId);
+        
         },[]);
 
 
