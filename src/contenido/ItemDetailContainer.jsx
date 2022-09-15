@@ -3,26 +3,21 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { productos } from "./Productos";
 import ItemDetail from "./ItemDetail";
+import { useParams } from "react-router-dom";
 
-const ItemDetailContainer = () => {
+export const ItemDetailContainer = () => {
     const [item, setItems] = useState({});
+    const {detalleId} = useParams();
 
     useEffect(()=>{
-        const getProducto = () =>
-        new Promise((resolve, reject)=>{
-            const producto = productos.find((produ)=> produ.id === 1);
+        const getProducto = new Promise(res=>{
             setTimeout(() => {
-                resolve(producto);
+                res(productos);
             }, 500);
         });
 
-        getProducto()
-        .then((detalle)=>{
-            setItems(detalle)
-        })
-        .catch((no)=>{
-            console.log(no)
-        })
+        getProducto.then(res => setItems(res.find(producto => producto.id === parseInt(detalleId))));
+        console.log(detalleId);
         },[]);
 
 
@@ -30,7 +25,7 @@ const ItemDetailContainer = () => {
     return(
         <div className="container">
             <h3>Detalle del Producto</h3>
-            <ItemDetail item={item}/>   
+            <ItemDetail item={item}/>  
         </div>
     )
 }

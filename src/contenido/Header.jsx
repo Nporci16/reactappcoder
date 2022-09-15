@@ -12,13 +12,16 @@ const Header = () => {
                             <a className="nav-link active" aria-current="page" href="#"><img src= {logo} width="180"  alt="Mundial" /></a>
                         </li>
                         <li className="nav-item">
-                        <Link className="nav-link active" aria-current="page" to='/inicio'>Inicio</Link>
+                        <Link className="nav-link active" aria-current="page" to='/'>Inicio</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to='/tienda'>Tienda</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link link_header"><img src= {news} width="30"  alt="news" />Noticias</a>
+                            <Link className="nav-link" to='/tienda/hombre'>Hombre</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to='/tienda/mujer'>Mujer</Link>
                         </li>
                         <CartWidget />
                     </ul>
