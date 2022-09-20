@@ -24,6 +24,8 @@ const Header = () => {
                             <Link className="nav-link" to='/tienda/mujer'>Mujer</Link>
                         </li>
                         <CartWidget />
+                        
+                        
                     </ul>
         </div>
     )
