@@ -1,11 +1,26 @@
-import React from "react";
-import carrito from "./images/carrito.png"
+import carrito from "./images/carrito.png";
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import {CartContext} from "../context/CartContext";
+import { useState } from "react";
+import { useEffect } from "react";
 
 const CartWidget = () => {
-        return(
-            <li className="nav-item">
-                            <a className="nav-link link_header"><img src= {carrito} width="70"  alt="carrito" /></a>
-                        </li>
+    const { cart } = useContext(CartContext); 
+    const [total, setTotal] = useState(0);
+
+    useEffect(() => {
+        let total_items = cart.reduce((total, item) => total += item.cantidad, 0);
+        setTotal(total_items);
+    }, [cart]);
+
+    return (
+        <Link to={"/cart"}>
+            <button type="button" className="btn fondo_naranja position-relative">
+                <img src={carrito} width="48" alt="Carrito" />
+                <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{total}</span>
+            </button>
+        </Link>
         )
     }
 

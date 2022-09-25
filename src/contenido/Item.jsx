@@ -1,8 +1,11 @@
-import React from "react";
 import {Link} from "react-router-dom";
+import React, { useContext } from 'react';
+import {CartContext} from "../context/CartContext";
 
 
 const Item = ({nombre, imagen, precio, id}) => {
+    
+
     return (
         <div className="card container-col-md-6">
             <Link to={`/detalle/${id}`}><img src={imagen} className="card-img-top" alt={nombre} /> </Link>

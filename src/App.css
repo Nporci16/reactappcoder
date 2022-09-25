@@ -9,8 +9,14 @@
   color:#0A58CA;
 }
 
+
+
 .fondo_header {
   background-color: #020f2a;
+}
+
+.btn .badge {
+  top: 10px !important;
 }
 
 
