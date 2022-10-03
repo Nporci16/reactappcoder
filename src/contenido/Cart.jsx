@@ -1,5 +1,6 @@
 import React, {useContext} from "react";
 import {CartContext} from "../context/CartContext";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
     const { cart, deleteOne, deleteAll, cartTotal } = useContext(CartContext);
@@ -40,6 +41,11 @@ const Cart = () => {
                 }
                     <div>
                         <h1>TOTAL: ${cartTotal()}</h1>
+                    </div>
+                    <div>
+                        <Link to={"/Checkout"} title="Finalizar Compra">
+                        <button className="btn fondo_naranja">Finalizar Compra <img src={carrito} alt="Finalizar Compra" width="16" /></button>
+                        </Link>
                     </div>
                 </main>
             </section>)
