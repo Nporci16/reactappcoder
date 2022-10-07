@@ -10,7 +10,7 @@ const ItemDetail = ({item}) => {
     const { addItem } = useContext(CartContext);
     const [counter, setCounter] = useState(0);
     const [addedProduct, setAddedProduct] = useState(false)
-    const onAdd = (item, counter) => {
+    const onAdd = (counter) => {
         setCounter(counter);
         addItem(item, counter);
         setAddedProduct(true)

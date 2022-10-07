@@ -9,7 +9,6 @@ const ItemDetailContainer = () => {
 
     useEffect(()=>{
         const db = getFirestore();
-        console.log(id);
         const response = doc(db, "items", id);
         getDoc(response).then(snapshot => {
             setItem({ id: snapshot.id, ...snapshot.data() });

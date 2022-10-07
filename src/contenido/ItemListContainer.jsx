@@ -12,7 +12,6 @@ const ItemListContainer = () => {
 
     useEffect(() => {
         const db = getFirestore();
-
         const productsCollection = collection(db, "items");
     
         const queryItems = id ? query(productsCollection, where("categoria", "==", id)) : productsCollection;

@@ -6,7 +6,6 @@ const CartProvider = ({ children }) =>{
     const [cart, setCart] = useState([]);
 
     const addItem = (item, cantidad) => {
-        console.log(cart)
         if (isInCart(item.id)) {
             let producto = cart.find(x => x.id === item.id);
             cart[cart.indexOf(producto)].cantidad += cantidad;
