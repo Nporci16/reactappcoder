@@ -5,7 +5,7 @@ import Success from "./Success";
 
 const Checkout = () => {
 
-    const { cart, addItem, clear, isInCart, sumarCantidad, deleteAll, totalUnidades, deleteOne, cartTotal } = useContext(CartContext);
+    const { cart, clear, cartTotal } = useContext(CartContext);
     const [nombre, setNombre] = useState("");
     const [email, setEmail] = useState("");
     const [telefono, setTelefono] = useState("");
