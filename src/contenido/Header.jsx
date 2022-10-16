@@ -1,7 +1,6 @@
 import React from "react";
-import logo from "./images/Logo_de_la_Copa_Mundial_de_fútbol_2022.svg.png";
+import logo from "./images/Logo_de_la_Copa_Mundial_de_fútbol_2022.png";
 import { Link } from "react-router-dom";
-import news from "./images/news.png";
 import CartWidget from "./CartWidget";
 
 const Header = () => {
